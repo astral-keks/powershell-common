@@ -1,3 +1,7 @@
+## 0.1.2
+### Added
+- Autocompletion result ordering
+
 ## 0.1.1
 ### Fixed
 - Proper binaries and nupkg versioning

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Management.Automation;
 using System.Management.Automation.Language;
 
@@ -41,9 +42,26 @@ namespace AstralKeks.PowerShell.Common.Parameters
                     FixParameterValues(_containers[commandName], buffer);
             }
 
-            if (result is IEnumerable<string>)
+            if (result is string[] || result is List<string>)
             {
                 foreach (var completionEntry in result as IEnumerable<string>)
+                {
+                    yield return new CompletionResult(completionEntry);
+                }
+            }
+            else if (result is IEnumerable<string>)
+            {
+                var orderedResult = (result as IEnumerable<string>)
+                    .Select(r => new
+                    {
+                        Value = r,
+                        Index = r.IndexOf(wordToComplete, StringComparison.OrdinalIgnoreCase)
+                    })
+                    .Where(t => t.Index >= 0)
+                    .GroupBy(t => t.Index)
+                    .OrderBy(g => g.Key)
+                    .SelectMany(g => g.Select(t => t.Value).OrderBy(v => v));
+                foreach (var completionEntry in orderedResult)
                 {
                     yield return new CompletionResult(completionEntry);
                 }
