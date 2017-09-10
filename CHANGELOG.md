@@ -1,3 +1,7 @@
+## 0.1.3
+### Added
+- Prompts support
+
 ## 0.1.2
 ### Added
 - Autocompletion result ordering

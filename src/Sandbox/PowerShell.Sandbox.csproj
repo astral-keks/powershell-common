@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <AssemblyName>AstralKeks.PowerShell.Sandbox</AssemblyName>
+    <RootNamespace>AstralKeks.PowerShell.Sandbox</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Management.Automation.dll" Version="10.0.10586" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\PowerShell.Common.csproj" />
+  </ItemGroup>
+
+</Project>
