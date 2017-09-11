@@ -1,3 +1,7 @@
+## 0.1.4
+### Fixed
+- Switch parameter null reference exception
+
 ## 0.1.3
 ### Added
 - Prompts support

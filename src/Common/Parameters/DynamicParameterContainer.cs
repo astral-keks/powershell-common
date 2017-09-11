@@ -11,7 +11,8 @@ namespace AstralKeks.PowerShell.Common.Parameters
 
         public TParameter GetValue<TParameter>(string parameterName)
         {
-            return ContainsKey(parameterName) ? (TParameter)this[parameterName]?.Value : default(TParameter);
+            var value = ContainsKey(parameterName) ? this[parameterName]?.Value : null;
+            return value != null ? (TParameter)value : default(TParameter);
         }
     }
 }
