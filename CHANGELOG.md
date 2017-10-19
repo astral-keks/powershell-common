@@ -1,3 +1,7 @@
+## 0.2.0
+### Changed
+- A complete rework of argument completion
+
 ## 0.1.4
 ### Fixed
 - Switch parameter null reference exception
