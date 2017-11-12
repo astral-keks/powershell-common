@@ -1,3 +1,7 @@
+## 0.2.1
+### Added
+- Argument completion wildcards
+
 ## 0.2.0
 ### Changed
 - A complete rework of argument completion

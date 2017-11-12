@@ -9,7 +9,7 @@ namespace AstralKeks.PowerShell.Sandbox
     public class TestCommand : Cmdlet
     {
         [Parameter]
-        public List<string> One { get; set; }
+        public string One { get; set; }
 
         [Parameter]
         [ArgumentCompleter(typeof(ParameterCompleter))]
@@ -24,6 +24,8 @@ namespace AstralKeks.PowerShell.Sandbox
         private IEnumerable<string> MyMethod(string word)
         {
             yield return $"{One}-asd";
+            yield return $"{One}-azzza";
+            yield return $"{One}-azzzasd";
         }
 
     }
