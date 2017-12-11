@@ -1,3 +1,7 @@
+## 0.2.2
+### Added
+- Extension for PathIntrinsics
+
 ## 0.2.1
 ### Added
 - Argument completion wildcards
