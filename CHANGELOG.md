@@ -1,3 +1,7 @@
+## 0.3.0
+### Changed
+- Retargeting to .NET Standard 2.0
+
 ## 0.2.2
 ### Added
 - Extension for PathIntrinsics

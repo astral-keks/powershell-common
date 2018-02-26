@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net462</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>AstralKeks.PowerShell.Common</AssemblyName>
     <RootNamespace>AstralKeks.PowerShell.Common</RootNamespace>
     <Authors>Astral Keks</Authors>
@@ -9,13 +9,13 @@
     <AssemblyVersion>$(VersionSuffix)</AssemblyVersion>
     <FileVersion>$(VersionSuffix)</FileVersion>
     <Description>Common components for creating PowerShell binary commands</Description>
-    <Copyright>Copyright (c) 2017 Astral Keks</Copyright>
+    <Copyright>Copyright (c) 2018 Astral Keks</Copyright>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/astral-keks/powershell-common</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Management.Automation.dll" Version="10.0.10586" />
+    <PackageReference Include="PowerShellStandard.Library" Version="5.1.0-preview-01" />
   </ItemGroup>
 
 </Project>
